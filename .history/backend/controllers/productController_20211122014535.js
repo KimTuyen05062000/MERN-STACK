@@ -143,21 +143,6 @@ exports.deleteReview = catchAsyncErrors( async (req, res, next) => {
     avg += rev.rating;
   });
   const ratings = avg / reviews.length;
-  const numOfReviews = reviews.length;
-
-  await Product.findByIdAndUpdate(
-    req.query.productId, 
-    { 
-      reviews,
-      ratings,
-      numOfReviews,
-    },
-    { 
-      new: true,
-      runValidators: true,
-      useFindAndModify: false,
-    }
-  );
 
   res.status(200).json({
     success: true,

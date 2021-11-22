@@ -190,7 +190,7 @@ exports.getSingleUser = catchAsyncErrors( async (req, res, next) => {
 });
 
 // Update User Role -- Admin
-exports.updateUserRole = catchAsyncErrors( async (req, res, next) => {
+exports.updateRole = catchAsyncErrors( async (req, res, next) => {
   const newUserData = {
     name: req.body.name,
     email: req.body.email,
@@ -221,6 +221,5 @@ exports.deleteUser = catchAsyncErrors( async (req, res, next) => {
   
   res.status(200).json({
     success: true,
-    message: 'User Delete Successfully'
   });
 });
