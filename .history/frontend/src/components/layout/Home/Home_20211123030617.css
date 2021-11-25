@@ -1,0 +1,18 @@
+.banner {
+  background-image: linear-gradient(to right, #635dc0, #3027ae);
+  height: 100vmin;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+  .banner > h1 {
+    margin: 5vmax;
+    font: 600 2.5vmax "Roboto";
+  }
+  .banner > h2 {
+    font: 300 1.4vmax "Lucida Sans";
+  }
+  
